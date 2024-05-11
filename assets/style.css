@@ -1,0 +1,299 @@
+:root {
+    --c-dark: #212529;
+    --c-brand: #4e57d4;
+    --c-brand-light: #6970dd;
+    --c-brand-rgb: 78, 87, 212;
+    --c-body: #727272;
+    --font-base: sans-serif;
+    --box-shadow: 0px 15px 25px rgba(0,0,0,0.08);
+    --transition: all 0.5s ease;
+}
+body {
+    font-family: var(--font-base);
+    line-height: 1.7;
+    color: var(--c-body);
+    background-color: #f9f6f2;
+}
+
+h1, h2, h3,h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    font-weight: 600;
+    color: var(--c-dark);
+}
+
+a {
+    text-decoration: none;
+    color: var(--c-brand);
+    transition: var(--transition);
+}
+a {
+    text-decoration: none;
+    color: var(--c-brand);
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--c-brand-light);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.section-padding {
+    padding-top: 140px;
+    padding-bottom: 140px;
+}
+
+.theme-shadow {
+    box-shadow: var(--box-shadow);
+}
+.image-zoom-wrapper {
+    overflow: hidden;
+    position: relative;
+}
+
+.image-zoom-wrapper img{
+     transition: var(--transition);
+}
+
+.image-zoom:hover .image-zoom-wrapper img {
+    transform: scale(1.1);
+}
+.navbar {
+    box-shadow: var(--box-shadow);
+    font-family: "Sawarabi Gothic", sans-serif; 
+}
+.navbar-nav .nav-link {
+    font-weight: 500;
+    color: var(--c-dark);
+    position: relative;
+}
+.navbar-nav .nav-link::after{
+    content: "";
+    opacity: 0;
+    transition: all 0.2s;
+    height: 2px;
+    width: 100%;
+    background-color: var(--c-brand) ;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+}
+.navbar-nav .nav-link:hover::after{
+    opacity: 1;
+}
+.btn {
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: 0;
+    padding: 10px 24px;
+}
+.btn-brand {
+    background-color: var(--c-brand);
+    border-color: var(--c-brand);
+    color: white;
+}
+.btn-brand:hover {
+    background-color: var(--c-brand-light);
+    border-color: var(--c-brand-light);
+    color: white;
+}
+#home {
+    background: linear-gradient(rgba(0, 0, 0, 0.274), rgba(0, 0, 0, 0.08)), url(./foto/Ambon.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+
+#home .h5{
+    color:rgb(255, 255, 255);
+    font-family: "Roboto Slab", serif;;
+    font-size: 8rem;
+    text-shadow: .0.5cm .0.5cm .0.5cm rgb(#212529);
+}
+.section-title {
+    margin-bottom: 20px;
+}
+.section-padding {
+    padding-top: 20px;
+}
+
+.section-title .line {
+    width: 60px;
+    height: 4px;
+    background-color: var(--c-brand);
+    margin: 16px auto 24px auto;
+}
+
+.section-title p {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.card-img-top{
+    border-radius: 20px;
+    padding: 10px;
+    
+}
+.card-body{
+    padding: 10px;
+    margin-top: -15px;
+}
+#destinasi .card-body {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+  }
+
+#destinasi .card-img-top{
+    border-radius: 5px;
+    padding: 5px;   
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px; 
+}
+
+#destinasi .col{
+    margin-bottom: 25px;
+}
+#destinasi .card-title{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#destinasi .card-text {
+    font-size: 20px;
+    max-width: 100%;
+    box-sizing: border-box;
+    line-height: 1.5; 
+    text-align: justify;
+}
+
+#Kuliner .card{
+    border-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+}
+#Kuliner.card-text {
+    font-size: 16px;
+    line-height: 1.5; 
+    margin-bottom: 20px; 
+    text-align: justify;
+}
+
+#Kuliner .card-img-top{
+    border-radius: 20px;
+    padding: 10px;
+}
+#Kuliner .card-title{
+    margin-top: 20px;
+}
+#Kesenian .card-title{
+    margin-top: 20px;
+    font-size: 30px;
+}
+#Kesenian .col{
+    margin-bottom: 20px;
+}
+#Kesenian .card-text {
+    font-size: 20px;
+    max-width: 100%;
+    box-sizing: border-box;
+    line-height: 1.5; 
+    text-align: justify;
+}
+
+#Contact {
+    position: relative;
+    z-index: 2;
+}
+
+#Contact::after {
+    content: "";
+    width: 100%;
+    height: 70%;
+    background: linear-gradient(rgba(0, 0, 0, 0.274), rgba(0, 0, 0, 0.08)), url(./foto/Ambon.jpg);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+#Contact .form-control {
+    border-radius: 0;
+}
+
+#Contact .form-control:focus {
+    box-shadow: none;
+    border-color: var(--c-brand);
+}
+footer {
+    padding-top: 120px;
+}
+
+.footer-top {
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+
+.footer-bottom {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+
+footer li,
+footer p,
+footer a {
+    color: rgba(255,255,255,0.7);
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer .line {
+    width: 40px;
+    height: 4px;
+    background-color: var(--c-brand);
+    margin-top: 12px;
+    margin-bottom: 24px;
+}
+
+.social-icons a {
+    width: 50px;
+    height: 5s0px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 100px;
+}
+
+.social-icons a:hover {
+    background-color: var(--c-brand);
+    color: white;
+}
+
+.contact-ikon a {
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 100px;
+}
+
+.contact-ikon a:hover {
+    background-color: var(--c-brand);
+    color: white;
+}
+
+
